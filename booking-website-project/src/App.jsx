@@ -1,60 +1,73 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
-// // import Experts from "./pages/Experts";
+
+// import { Routes, Route } from "react-router-dom";
+// import Navbar from "./components/Navbar";
+// import Home from "./pages/Home";
 // import Experts from "./components/Experts";
 // import ExpertProfile from "./pages/ExpertProfile";
-// import Home from "./pages/Home";
+// import BookingPage from "./pages/booking/BookingPage";
+// import './app.css'
 
 // export default function App() {
 //   return (
-//     <BrowserRouter>
+//     <>
+//       <Navbar/>
+
 //       <Routes>
 //         <Route path="/" element={<Home />} />
 //         <Route path="/experts" element={<Experts />} />
 //         <Route path="/experts/:id" element={<ExpertProfile />} />
+
+//         <Route path="/book/:id" element={<BookingPage />} />
 //       </Routes>
-//     </BrowserRouter>
+//     </>
 //   );
 // }
 
-
-
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Experts from "./components/Experts";
 import ExpertProfile from "./pages/ExpertProfile";
+import BookingPage from "./pages/booking/BookingPage";
 
+// Admin pages
+import AdminLogin from "./pages/admin/AdminLogin";
+import DoctorManagement from "./pages/admin/DoctorManagement";
+
+// Context
+import { ExpertProvider } from "./context/ExpertContext";
+
+import "./app.css";
+
+// Admin route protection
+const AdminRoute = ({ children }) => {
+  const isAdmin = localStorage.getItem("isAdmin");
+  return isAdmin ? children : <Navigate to="/admin/login" />;
+};
 
 export default function App() {
   return (
-    <>
-      <Navbar/>
+    <ExpertProvider>
+      <Navbar />
 
       <Routes>
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/experts" element={<Experts />} />
         <Route path="/experts/:id" element={<ExpertProfile />} />
+        <Route path="/book/:id" element={<BookingPage />} />
+
+        {/* Admin Routes */}
+        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route
+          path="/admin/doctors"
+          element={
+            <AdminRoute>
+              <DoctorManagement />
+            </AdminRoute>
+          }
+        />
       </Routes>
-    </>
+    </ExpertProvider>
   );
 }
-
-
-// import { Routes, Route, Navigate } from "react-router-dom";
-// import Experts from "./components/Experts";
-// import Home from "./pages/Home";
-
-
-// export default function App() {
-//   return (
-//     <Routes>
-//       <Route path="/" element={<Navigate to="/home" />} />
-//       <Route path="home" element={<Navigate to="/experts" />} />
-
-//       <Route path="/experts" element={<Experts />} />
-//       <Route path="/home" element={<Home />} />
-//       <Route path="/" element={<Home />} />
-     
-//     </Routes>
-//   );
-// }

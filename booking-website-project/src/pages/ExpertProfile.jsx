@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
 import { experts } from "../data/experts";
+import { useNavigate } from "react-router-dom";
 
 export default function ExpertProfile() {
+  const navigate = useNavigate();
   const { id } = useParams();
   const expert = experts.find((e) => e.id === id);
 
@@ -13,9 +15,7 @@ export default function ExpertProfile() {
     <div className="max-w-7xl mx-auto px-6 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
-        {/* LEFT SECTION */}
         <div className="lg:col-span-2">
-          {/* Header */}
           <div className="flex items-center gap-6">
             <img
               src={expert.image}
@@ -32,12 +32,10 @@ export default function ExpertProfile() {
             </div>
           </div>
 
-          {/* Video placeholder */}
           <div className="mt-8 bg-gray-200 rounded-xl h-64 flex items-center justify-center">
             ▶ Intro Video
           </div>
 
-          {/* Bio */}
           <div className="mt-8">
             <h2 className="text-lg font-semibold mb-2">About</h2>
             <p className="text-gray-700 leading-relaxed">
@@ -45,7 +43,6 @@ export default function ExpertProfile() {
             </p>
           </div>
 
-          {/* Languages */}
           <div className="mt-6">
             <h2 className="text-lg font-semibold mb-2">Languages</h2>
             <p className="text-gray-700">
@@ -54,13 +51,11 @@ export default function ExpertProfile() {
           </div>
         </div>
 
-        {/* RIGHT BOOKING CARD */}
         <div className="border rounded-2xl p-6 shadow-sm">
           <h3 className="text-lg font-semibold mb-4">
             Book a Session
           </h3>
 
-          {/* Consultation Modes */}
           <p className="text-sm text-gray-600 mb-2">
             Consultation Mode
           </p>
@@ -76,7 +71,6 @@ export default function ExpertProfile() {
             ))}
           </div>
 
-          {/* Price */}
           <p className="text-sm text-gray-600 mb-4">
             50 mins session
           </p>
@@ -85,7 +79,6 @@ export default function ExpertProfile() {
             ₹{expert.price} / session
           </p>
 
-          {/* Slot */}
           <p className="text-sm mb-6">
             Next available slot:
             <span className="text-orange-500 font-medium">
@@ -93,8 +86,8 @@ export default function ExpertProfile() {
             </span>
           </p>
 
-          {/* CTA */}
-          <button className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-full font-medium">
+          <button onClick={() => navigate(`/book/${expert.id}`)} 
+          className="cursor-pointer w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-full font-medium">
             Book Appointment
           </button>
         </div>
