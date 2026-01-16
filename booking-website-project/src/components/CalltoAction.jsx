@@ -1,5 +1,6 @@
 import React from 'react';
 import facilities from "../assets/facilities-9.webp";
+import { Link } from 'react-router-dom';
 
 
 const CallToActionSection = () => {
@@ -17,16 +18,16 @@ const CallToActionSection = () => {
               et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="/appointment" 
+             <Link to="/experts"> <a 
+                 
                 className="bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center gap-2 shadow-lg"
               >
                 <span>Schedule Consultation</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-              <a 
+              </a></Link>
+             <Link to="/experts"> <a 
                 href="/services" 
                 className="border-2 border-gray-300 text-gray-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center gap-2"
               >
@@ -34,7 +35,7 @@ const CallToActionSection = () => {
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
+              </a></Link>
             </div>
           </div>
           <div className="order-1 md:order-2">
