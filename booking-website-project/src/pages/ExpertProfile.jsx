@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { experts } from "../data/experts";
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 export default function ExpertProfile() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ export default function ExpertProfile() {
   }
 
   return (
+    <>
     <div className="max-w-7xl mx-auto px-6 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
 
@@ -93,5 +95,7 @@ export default function ExpertProfile() {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }

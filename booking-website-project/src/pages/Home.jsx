@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import CallToActionSection from "../components/CalltoAction";
+import Footer from "./Footer"
 
 export default function Home() {
   return (
+    <>
     <div className="relative bg-black text-white">
       
       {/* Background Image */}
@@ -39,6 +42,12 @@ export default function Home() {
           <span>• For Individuals & Families</span>
         </div>
       </div>
+      
     </div>
+    <div>
+        <CallToActionSection/>
+      </div>
+        <Footer/>
+    </>
   );
 }
