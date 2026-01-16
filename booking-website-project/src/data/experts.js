@@ -1,82 +1,82 @@
-import kanchanImg from "../assets/experts/kanchanImg.png";
-import nehaImg from "../assets/experts/nehaImg.png";
-import aparijitaImg from "../assets/experts/aparijitaImg.png";
-import anamikaImg from "../assets/experts/anamikaImg.png";
-import Ahmed from "../assets/experts/Ahmed.png";
-import Elvin from "../assets/experts/Elvin.png";
+import Staff3 from "../assets/experts/staff-3.webp";
+import Staff1 from "../assets/experts/staff-1.webp";
+import Staff6 from "../assets/experts/staff-6.webp";
+import Staff2 from "../assets/experts/staff-2.webp";
+import Staff7 from "../assets/experts/staff-7.webp";
+import Staff8 from "../assets/experts/staff-8.webp";
 
 
 export const experts = [
   {
     id: "1",
-    name: "Kanchan Joshi",
+    name: "Dr. Michelle Rodriguez",
     title: "Senior Clinical Psychologist",
     experience: 4,
     specialty: "Psychologist",
     price: 2150,
     bio:
-      "Kanchan Joshi is a Senior Clinical Psychologist with over four years of experience in providing therapy for stress, anxiety, grief, and emotional well-being. She follows an empathetic and evidence-based approach.",
+      "Michelle Rodriguez is a Senior Clinical Psychologist with over four years of experience in providing therapy for stress, anxiety, grief, and emotional well-being. She follows an empathetic and evidence-based approach.",
     expertise: ["Stress management", "Grief & loss", "Self improvement"],
     languages: ["English", "Hindi", "Tamil"],
     consultationModes: ["Video", "Call"],
     nextSlot: "Today, 09:00 PM",
-    image: kanchanImg,
+    image: Staff3,
     availability: "Available",
   },
 
   {
     id: "2",
-    name: "Neha Nanda",
+    name: "Dr. Mathew John",
     title: "Therapist",
     experience: 3,
     specialty: "Therapist",
     price: 1600,
     bio:
-      "Neha Nanda is a compassionate therapist who focuses on self-growth, emotional regulation, and personality development. She helps individuals navigate personal and professional challenges.",
+      "Mathew John is a compassionate therapist who focuses on self-growth, emotional regulation, and personality development. He helps individuals navigate personal and professional challenges.",
     expertise: ["Self improvement", "Personality disorders"],
-    languages: ["English", "Hindi", "Odia"],
+    languages: ["English", "Hindi", "Tamil"],
     consultationModes: ["Video", "Call"],
     nextSlot: "Tomorrow, 11:30 AM",
-    image: nehaImg,
+    image: Staff1,
     availability: "Available",
   },
 
   {
     id: "3",
-    name: "Aparijita Adgiri",
+    name: "Dr. Sera Michael",
     title: "Clinical Psychologist",
     experience: 2,
     specialty: "Psychologist",
     price: 1550,
     bio:
-      "Aparijita Adgiri specializes in stress management and emotional resilience. She works closely with clients to help them overcome grief and improve mental well-being.",
+      "Sera Michael specializes in stress management and emotional resilience. She works closely with clients to help them overcome grief and improve mental well-being.",
     expertise: ["Stress management", "Grief & loss", "Self improvement"],
     languages: ["English", "Hindi", "Bengali"],
     consultationModes: ["Video"],
     nextSlot: "Tomorrow, 06:00 PM",
-    image: aparijitaImg,
+    image: Staff6,
     availability: "Available",
   },
 
   {
     id: "4",
-    name: "Anamika Bhattacharjee",
+    name: "Dr. Alive David",
     title: "Senior Therapist",
     experience: 5,
     specialty: "Therapist",
     price: 2100,
     bio:
-      "Anamika Bhattacharjee is a senior therapist with extensive experience in helping individuals cope with stress, emotional trauma, and personal development challenges.",
+      "Alive David is a senior therapist with extensive experience in helping individuals cope with stress, emotional trauma, and personal development challenges.",
     expertise: ["Stress management", "Grief & loss", "Self improvement"],
     languages: ["English", "Hindi", "Bengali"],
     consultationModes: ["Video", "Call"],
     nextSlot: "Tomorrow, 05:00 PM",
-    image: anamikaImg,
+    image: Staff2,
     availability: "Not Available",
   },
   {
     id: "5",
-    name: "Dr Ahmed Reshamvala",
+    name: "Dr. Ahmed Reshamvala",
     title: "Senior Therapist",
     experience: 6,
     specialty: "Psychiatrist",
@@ -87,12 +87,12 @@ export const experts = [
     languages: ["English", "Hindi", "Telugu"],
     consultationModes: ["Video", "Call"],
     nextSlot: "Tomorrow, 06:00 PM",
-    image: Ahmed,
+    image: Staff7,
     availability: "Not Available",
   },
   {
     id: "6",
-    name: "Dr Elvin Lukose",
+    name: "Dr. Elvin Lukose",
     title: "Senior Therapist",
     experience: 5,
     specialty: "Psychiatrist",
@@ -103,7 +103,7 @@ export const experts = [
     languages: ["English", "Hindi", "Marathi","Malayalam"],
     consultationModes: ["Video", "Call"],
     nextSlot: "Tomorrow, 08:00 PM",
-    image: Elvin,
+    image: Staff8,
     availability: "Not Available",
   },
 ];

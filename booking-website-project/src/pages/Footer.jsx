@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-3 mb-6">
-                <h2 className='text-2xl font-bold text-orange-500'>amaha</h2>
+                <h2 className='text-2xl font-bold text-orange-500'>WeCare</h2>
              
               <div className="h-10 w-0.5 bg-orange-400"></div>
             </div>

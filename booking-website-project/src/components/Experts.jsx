@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { experts } from "../data/experts";
 import ExpertCard from "../components/ExpertCard";
+import Footer from "../pages/Footer";
 
 export default function Experts() {
   const [search, setSearch] = useState("");
@@ -18,7 +19,8 @@ export default function Experts() {
   });
 
   return (
-    <div className="bg-[#fff7f3] min-h-screen">
+    <>
+    <div className="bg-[#fff7f1] min-h-screen">
       <div className="max-w-7xl mx-auto px-6 py-8">
 
         <h1 className="text-2xl font-semibold text-gray-800 mb-6">
@@ -29,17 +31,17 @@ export default function Experts() {
           <input
             type="text"
             placeholder="Search experts by name"
-            className="border rounded-lg px-4 py-2 w-full md:w-1/2"
+            className="shadow-lg bg-white hover:shadow-xl rounded-lg px-4 py-2 w-full md:w-1/2"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
 
           <select
-            className="border rounded-lg px-4 py-2 w-full md:w-1/4"
+            className="shadow-lg hover:shadow-xl bg-white rounded-lg px-4 py-2 w-full md:w-1/4"
             value={specialty}
             onChange={(e) => setSpecialty(e.target.value)}
           >
-            <option value="All">All Specialties</option>
+            <option className="" value="All">All Specialties</option>
             <option value="Therapist">Therapist</option>
             <option value="Psychologist">Psychologist</option>
             <option value="Psychiatrist">Psychiatrist</option>
@@ -60,6 +62,8 @@ export default function Experts() {
 
       </div>
     </div>
+    <Footer/>
+    </>
   );
 }
 

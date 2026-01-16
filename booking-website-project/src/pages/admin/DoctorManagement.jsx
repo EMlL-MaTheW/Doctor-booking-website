@@ -25,7 +25,7 @@ export default function DoctorManagement() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-4 md:p-6">
-      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-sm p-6">
+      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-6">
 
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">

@@ -28,7 +28,6 @@ const CallToActionSection = () => {
                 </svg>
               </a></Link>
              <Link to="/experts"> <a 
-                href="/services" 
                 className="border-2 border-gray-300 text-gray-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-colors flex items-center gap-2"
               >
                 <span>Explore Services</span>

@@ -19,7 +19,7 @@ export default function BookingPage() {
 
   return (
     <div className="min-h-screen bg-[#fff7f3] flex items-center justify-center px-4">
-      <div className="bg-white w-full max-w-xl rounded-xl shadow p-6">
+      <div className="bg-white w-full max-w-xl rounded-xl shadow-xl p-6">
 
         <h1 className="text-2xl font-semibold text-center mb-2">
           Book Appointment

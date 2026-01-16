@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { experts } from "../data/experts";
 import { useNavigate } from "react-router-dom";
 import Footer from "./Footer";
+import '../App.css'
 
 export default function ExpertProfile() {
   const navigate = useNavigate();
@@ -34,9 +35,9 @@ export default function ExpertProfile() {
             </div>
           </div>
 
-          <div className="mt-8 bg-gray-200 rounded-xl h-64 flex items-center justify-center">
+          {/* <div className="mt-8 bg-gray-200 rounded-xl h-64 flex items-center justify-center">
             ▶ Intro Video
-          </div>
+          </div> */}
 
           <div className="mt-8">
             <h2 className="text-lg font-semibold mb-2">About</h2>
@@ -53,7 +54,7 @@ export default function ExpertProfile() {
           </div>
         </div>
 
-        <div className="border rounded-2xl p-6 shadow-sm">
+        <div className="card  rounded-2xl p-6 shadow-xl hover:shadow-xl">
           <h3 className="text-lg font-semibold mb-4">
             Book a Session
           </h3>
